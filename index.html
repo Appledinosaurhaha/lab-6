@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live City Weather</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="clear-sky">
+  <main class="container">
+    <h1>Live Weather Monitor</h1>
+    <p class="subtitle">Real-time weather data from Open-Meteo API</p>
+
+    <div class="controls">
+      <label for="city-select">Choose a city:</label>
+      <select id="city-select">
+        <option value="mississauga">Mississauga, ON</option>
+        <option value="toronto">Toronto, ON</option>
+        <option value="vancouver">Vancouver, BC</option>
+        <option value="tokyo">Tokyo, Japan</option>
+        <option value="london">London, UK</option>
+      </select>
+
+      <button id="unit-btn" type="button">Switch to °F</button>
+      <button id="refresh-btn" type="button">Refresh</button>
+    </div>
+
+    <section class="weather-card" id="weather-card">
+      <h2 id="city-name">Mississauga</h2>
+      <p id="status-msg" class="status">Loading live data...</p>
+
+      <div class="temp-display">
+        <span id="temp-value">--</span>
+        <span id="temp-unit">°C</span>
+      </div>
+
+      <p id="condition-text" class="condition">--</p>
+
+      <div class="details">
+        <div>
+          <strong>Wind Speed:</strong>
+          <span id="wind-value">--</span> km/h
+        </div>
+        <div>
+          <strong>Day/Night:</strong>
+          <span id="day-status">--</span>
+        </div>
+      </div>
+
+      <p id="advice-banner" class="advice">Checking local conditions...</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
