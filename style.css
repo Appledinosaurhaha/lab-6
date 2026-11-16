@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.5s ease, color 0.3s ease;
+  background-color: #dbeafe;
+  color: #1e293b;
+}
+
+/* Dynamic themes changed by JS based on live API data */
+body.clear-sky {
+  background-color: #bae6fd;
+  color: #0f172a;
+}
+
+body.cloudy-sky {
+  background-color: #cbd5e1;
+  color: #1e293b;
+}
+
+body.rainy-sky {
+  background-color: #94a3b8;
+  color: #0f172a;
+}
+
+body.cold-snow {
+  background-color: #e2e8f0;
+  color: #1e3a8a;
+}
+
+body.night-mode {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+select,
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #64748b;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #0f172a;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.status {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-top: 4px;
+}
+
+.temp-display {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin: 16px 0 8px;
+}
+
+.condition {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.advice {
+  font-size: 0.95rem;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f1f5f9;
+}
